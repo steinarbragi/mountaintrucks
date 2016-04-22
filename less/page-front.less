@@ -3,6 +3,7 @@ body.trucks {
 			background: url("/assets/trucksbg2.jpg") no-repeat fixed;
 		  	background-size: cover;
 		  	background-position: bottom;
+		  	background-color: rgba(0,0,0,.5);
 			@media (max-width: @mobile-max) { 
 				/*background: url("/assets/trucksbg2.jpg") no-repeat fixed;
 				background-size:cover;*/
@@ -16,7 +17,35 @@ body.trucks {
 		  			margin-top: 0px;
 		  		}
 		  	}
+		  	position: relative;
+		  	.section-inner {
+		  		z-index: 2;
+		  	-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+		       -moz-animation: fadein 2s; /* Firefox < 16 */
+		        -ms-animation: fadein 2s; /* Internet Explorer */
+		         -o-animation: fadein 2s; /* Opera < 12.1 */
+		            animation: fadein 2s;
+			}
 		}
+
+		#trucks.section::after {
+			content: ' ';
+		    position: absolute;
+		    left: 0;
+		    right: 0;
+		    top: 0;
+		    bottom: 0;
+		    background-color: rgba(255,255,255,0);
+		    transition: background-color 1s;
+		    @media (max-width: @mobile-max) { 
+				background-color: rgba(0,0,0,.8);
+			}
+		}
+
+		#trucks.section:hover:after {
+		    background-color: rgba(0,0,0,.8);
+		}
+
 
 		#site-footer {
 			.container {
@@ -27,6 +56,10 @@ body.trucks {
 			}
 			border-bottom: 0;
 			padding: 0;
+			background-color: rgba(0,0,0,0.8);
+			p {
+				color: #fff;
+			}
 		}
 	h1 {
 		color: #FF6200;
@@ -44,6 +77,62 @@ body.trucks {
 		}
 		border-bottom: 0;
 		padding: 0;
+	}
+	@keyframes fadein {
+	    from { opacity: 0; }
+	    to   { opacity: 1; }
+	}
+
+	/* Firefox < 16 */
+	@-moz-keyframes fadein {
+	    from { opacity: 0; }
+	    to   { opacity: 1; }
+	}
+
+	/* Safari, Chrome and Opera > 12.1 */
+	@-webkit-keyframes fadein {
+	    from { opacity: 0; }
+	    to   { opacity: 1; }
+	}
+
+	/* Internet Explorer */
+	@-ms-keyframes fadein {
+	    from { opacity: 0; }
+	    to   { opacity: 1; }
+	}
+
+	/* Opera < 12.1 */
+	@-o-keyframes darken {
+	    from { background-color: rgba(0,0,0,0);  }
+	    to   { background-color: rgba(0,0,0,.5);  }
+	}
+	@keyframes darken {
+	    from { background-color: rgba(0,0,0,0); }
+	    to   { background-color: rgba(0,0,0,.5);  }
+	}
+
+	/* Firefox < 16 */
+	@-moz-keyframes darken {
+	    from { background-color: rgba(0,0,0,0); }
+	    to   { background-color: rgba(0,0,0,.5);  }
+	}
+
+	/* Safari, Chrome and Opera > 12.1 */
+	@-webkit-keyframes darken {
+	    from { background-color: rgba(0,0,0,0); }
+	    to   { background-color: rgba(0,0,0,.5);  }
+	}
+
+	/* Internet Explorer */
+	@-ms-keyframes darken {
+	    from { background-color: rgba(0,0,0,0);  }
+	    to   { background-color: rgba(0,0,0,.5);  }
+	}
+
+	/* Opera < 12.1 */
+	@-o-keyframes darken {
+	    from { background-color: rgba(0,0,0,0); }
+	    to   { background-color: rgba(0,0,0,.5);  }
 	}
 }
 
