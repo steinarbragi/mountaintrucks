@@ -1,0 +1,243 @@
+#site-header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  box-sizing: border-box;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+  font-weight: 400;
+
+  .site-header-toprow {
+    padding: round(@padding * 1.5) round(@padding * 1.5) 0;
+    height: 40px;
+    box-shadow: 0 2px fade(black, 5%);
+    position: relative;
+
+    @media (max-width: @nav-max) {
+      text-align: right;
+    }
+
+    .site-logo {
+      position: absolute;
+      left: @padding * 1.5;
+      text-decoration: none;
+      color: #333;
+      margin-top: -5px;
+      img {
+        vertical-align: -9px;
+        width: 36px;
+        height: 36px;
+      }
+      .logotype {
+        height: 36px;
+        margin-top: 0;
+        font-size: 26px; // fixed
+      }
+      @media (max-width: 220px) {
+        .logotype span {
+          display: none;
+        }
+      }
+    }
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+
+  .site-header-rowbelow {
+    background-color: @gray;
+    color: white;
+    a {
+      font-weight: 400;
+      font-size: 0.8em;
+      display: inline-block;
+      text-decoration: none;
+      padding: 4px 14px;
+      margin-right: -4px;
+
+      &.active {
+        background-color: white;
+        color: #4d4d4d;
+      }
+      &:hover:not(.active)  {
+        background-color: darken(@gray, 5%);
+        color: white;
+      }
+    }
+  }
+
+  .site-logo {
+    float: left;
+    height: 26px;
+    width: auto;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .btn-download {
+    position: absolute;
+    top: 1px;
+    right: 20px;
+    text-transform: none;
+    width: auto;
+    font-size: 0.9em;
+    color: white;
+    font-weight: 700;
+    border-width: 0;
+    line-height: 1;
+    padding: (@padding - 1px) (@padding + 2px) (@padding - 2px);
+
+    &.disabled {
+      background: #f6f6f6;
+      box-shadow: 0 0 0 1px fade(black, 10%);
+      color: #CCC;
+      text-shadow: none;
+      pointer-events: none;
+    }
+
+    @media (max-width: @nav-max) {
+      right: 50px;
+      .mobile-hidden {
+        display: none;
+      }
+    }
+  }
+
+  #site-nav {
+
+    .site-nav-wrapper {
+      display: inline-block;
+      font-size: 0.75em;
+      margin-top: @padding / 2;
+    }
+
+    a {
+      display: inline-block;
+      color: #4c4c4c;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      border-bottom: 3px solid fade(@red, 0);
+      text-decoration: none;
+      text-transform: uppercase;
+      margin: 0 @padding;
+      position: relative;
+      // discard extra whitespace
+      float: left;
+      white-space: nowrap;
+
+      &:hover {
+        color: @red;
+      }
+      &.active {
+        color: @red;
+        font-weight: 700;
+      }
+      &:active{
+        color: @red;
+      }
+      + a::before {
+        content: "|";
+        position: absolute;
+        left: -@padding - 1;
+        color: #dbdbdb;
+      }
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .displayMobileMenu {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+
+      .site-nav-wrapper {
+        font-size: 1em;
+        position: absolute;
+        right: 0;
+        top: @padding * 3;
+        min-width: 140px;
+        float: none;
+        border-radius: 4px;
+        background-color: fade(white, 95);
+        box-shadow: inset 0 0 1px 0 rgba(0,0,0,0.5),
+                    0 2px 3px rgba(0,0,0,0.2);
+        padding: 6px 0 4px;
+        display: none;
+        margin: 0;
+      }
+
+      span {
+        display: none;
+      }
+
+      a {
+        display: block;
+        float: none;
+        height: auto;
+        text-align: left;
+        + a::before {
+          content: none;
+        }
+      }
+
+      .menu-icon {
+        line-height: 0;
+        padding: 0;
+        margin: -@padding;
+        border-width: 0;
+        border-radius: 3px;
+        opacity: 0.5;
+        svg {
+          padding: round(@padding*1.5) @padding round(@padding*0.5) @padding;
+          height: 19px;
+          width: 19px;
+          fill: gray;
+        }
+      }
+      &:hover, &:focus, &:active {
+        .menu-icon {
+          background-color: white;
+        }
+        .site-nav-wrapper {
+          display: block;
+        }
+      }
+    }
+
+    @media (max-width: @nav-max) {
+      .displayMobileMenu
+    }
+    @media (min-width: @nav-max) {
+      .menu-icon {
+        display: none;
+      } 
+    }
+    body.results & {
+      .displayMobileMenu
+    }
+  }
+
+  
+}
+
+
+#page-nav {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.rtl {
+	direction: rtl;
+}

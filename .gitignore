@@ -1,0 +1,12 @@
+/node_modules
+npm-debug.log
+_site/assets/script.js
+_site/assets/style.css
+_site/assets/build
+_site/assets/css
+_site/assets/js
+_site/assets/rev-manifest.json
+_site/assets/css-manifest.json
+_site/assets/js-manifest.json
+_site/assets/.DS_Store
+.DS_Store

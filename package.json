@@ -1,0 +1,24 @@
+{
+  "name": "vivaldisearch",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git.viv.int/srv/git/web/search.git"
+  },
+  "dependencies": {
+    "autoprefixer-core": "^5.1.11",
+    "gulp-postcss": "^5.1.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-less": "^3.0.2",
+    "gulp-livereload": "^3.8.0",
+    "gulp-rev": "^3.0.1",
+    "gulp-uglify": "^1.1.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}

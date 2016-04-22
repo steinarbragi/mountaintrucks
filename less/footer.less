@@ -1,0 +1,92 @@
+#site-footer {
+  background:white;
+  border-top: 2px solid #eee;
+  padding: @padding*3 0 0 0;
+  border-bottom: 2px solid @red;
+  font-size: 0.75em;
+  color: #666;
+  text-align: left;
+
+  .container {
+    position: relative;
+    padding-bottom: 0;
+  }
+
+  h3 {
+    font: inherit;
+    text-transform: uppercase;
+    margin: 0 0 round(@padding * 0.8) 0;
+    font-weight: 600;
+  }
+
+  a:hover {
+    color: @red;
+  }
+
+  .mini-sitemap, .social {
+    a {
+      display: block;
+      .linux & {
+        font-weight: 400;
+      }
+      .win & {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .mini-sitemap {
+    float: left;
+    width: 60%;
+    &:after {
+      content: "";
+      display: block;
+      clear: left;
+    }
+    @media (max-width: @mobile-max) {
+      float: none;
+      width: 100%;
+    }
+
+    .mini-sitemap-section {
+      width: 25%;
+      float: left;
+      text-align: left;
+      margin-bottom: @padding*3;
+
+      @media (max-width: @mobile-max) {
+        float: none;
+        width: 100%;
+      }
+    }
+  }
+
+  .copyright {
+    clear: left;
+    padding-top: 30px;
+  }
+  .locales {
+    background-color: rgba(0, 0, 0, 0.01);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+    padding-top: 10px;
+    height: 40px;
+    text-align: center;
+    & a {
+      margin-right: 10px;
+      &.active {
+      font-weight: 700;
+      color: @red;
+    }
+    }
+  }
+
+
+  .vivaldi-logo {
+    display: inline-block;
+    width: 24px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: @padding / 2;
+  }
+}

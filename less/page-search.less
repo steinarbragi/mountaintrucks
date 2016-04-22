@@ -1,0 +1,118 @@
+body.search {
+	#search.section {
+		background: url("/assets/intro_bg.jpg") no-repeat fixed;
+	  	background-size: cover;
+	  	height: 100%;
+		#searchlogo {
+			width: 100%;
+			max-width: 356px;
+		}
+  	.searchcontainer {
+  		form {
+	  		position: relative;
+	  		margin-top: 50px;
+	  		input {
+	  			border: 1px solid rgba(0, 0, 0, 0.05);
+				background-color: rgb(255, 255, 255);
+				box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+				margin: 0px;
+				height: 45px;
+				font-size: 1em;
+	  		}
+	  		._input {
+				padding: 0 10px;
+				height: 45px;
+				width: 70%;
+	  		}
+	  		._button {
+				z-index: 4;
+				width: 72px;
+				background-color: #006ed7;
+				.at2x("/assets/glass.png", 16, 16);
+				background-repeat: no-repeat;
+				background-size: 16px 16px;
+				background-position: center center;
+				font-size: 1.143em;
+				color: rgb(0, 0, 0);
+				vertical-align: bottom;
+				&:hover {
+					background-color: #0b88ff;
+					box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.08) inset;
+				}
+				&:active {
+					background-color: #0054a4;
+				}
+			}
+			/* squeezing the searchbar into a webpanel */
+			@media (max-width: 380px) {
+		        ._button {
+		          width: 35px;
+		        }
+  			}
+  			@media (max-width: 250px) {
+		        ._input {
+		          width: 60%;
+		        }
+  			}
+  			@media (max-width: 200px) {
+		        ._input {
+		          width: 50%;
+		        }
+  			}
+  		}
+  	}
+  	.section-inner {
+  		width: 100%;
+  	}
+	}
+	#site-footer {
+		.container {
+			padding: 20px;
+		}
+		.locales {
+			margin-top: 0px;
+		}
+		.copyright {
+			padding: 5px;
+		}
+		border-bottom: 0;
+		padding: 0;
+	}
+}
+body {
+	.suggest_link {
+		background-color: #ffffff;
+		padding: 8px 6px 2px 10px;
+		height: 14px;
+		line-height: 10px;
+		vertical-align: center;
+		overflow:hidden;
+	}
+	 .suggest_link_over {
+		background-color: #E6F1FB;
+		padding: 8px 10px 2px 10px;
+		height:14px;
+		line-height: 10px;
+		overflow:hidden;
+		vertical-align: center;
+		cursor:pointer;
+		color: #000000;
+	 }
+	 .suggestPanel {
+		position: absolute; 
+		display:none;
+		background-color: #ffffff;
+		text-align: left;
+		border: 0px 1px 1px 1px solid #000000;
+		border-top: 0px;
+		margin-top: -1px;
+		z-index: 10;
+		border: 1px solid rgba(0, 0, 0, 0.05);
+		border-top: 0px;
+		background-color: rgb(255, 255, 255);
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+		font-size: 0.8em;
+		box-sizing: border-box;
+	 }
+}
+
