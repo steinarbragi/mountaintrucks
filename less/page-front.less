@@ -1,15 +1,40 @@
-body.search {
-	#search.section {
-		background: url("/assets/intro_bg.jpg") no-repeat fixed;
-	  	background-size: cover;
-	  	height: 100%;
-		#searchlogo {
-			width: 100%;
-			max-width: 356px;
+body.trucks {
+		#trucks.section {
+			background: url("/assets/truckbg1.jpg") no-repeat fixed;
+		  	background-size: cover;
+			@media (max-width: @mobile-max) { 
+				background: url("/assets/trucksbgmobile.jpg") no-repeat fixed;
+				background-size:cover;
+			}
+		  	height: 100%;
+		  	.container {
+		  		max-width: 500px;
+		  		margin-top: -150px;
+		  		@media (max-width: @mobile-max) { 
+		  			margin-top: 0px;
+		  		}
+		  	}
 		}
+
+		#site-footer {
+			.container {
+				padding: 20px;
+			}
+			.copyright {
+				padding: 5px;
+			}
+			border-bottom: 0;
+			padding: 0;
+		}
+	h1 {
+		color: #FF5600;
+	}
 	#site-footer {
 		.container {
 			padding: 20px;
+		}
+		.locales {
+			margin-top: -20px;
 		}
 		.copyright {
 			padding: 5px;
@@ -17,7 +42,5 @@ body.search {
 		border-bottom: 0;
 		padding: 0;
 	}
-}
-body {
 }
 

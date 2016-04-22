@@ -1,6 +1,3 @@
-# search.vivaldi.COM
-Development of the search.vivaldi.com website.
-
 
 ## Development
 0. Install modules by running "npm install" in the git root folder.

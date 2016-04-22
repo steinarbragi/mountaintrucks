@@ -1,9 +1,8 @@
 {
-  "name": "vivaldisearch",
+  "name": "trucks",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "ssh://git.viv.int/srv/git/web/search.git"
   },
   "dependencies": {
     "autoprefixer-core": "^5.1.11",

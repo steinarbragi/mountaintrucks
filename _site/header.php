@@ -6,8 +6,6 @@ $siteroot = __DIR__;
 // page meta
 if (!isset($pageTitle)) {
 	$pageTitle = "Title";
-} else {
-	$pageTitle .= " – Sub";
 }
 if (!isset($pageDescription)) {
 	$pageDescription = "Description";
@@ -41,17 +39,17 @@ if ($ua['name'] == 'Internet Explorer') {?>
 <head>
 <?php }?>
   <meta charset="utf-8" />
-  <meta name="author" content="Vivaldi Technologies" />
+  <meta name="author" content="Íslenska Fjallatrukkafélagið" />
   <meta name="description" content="<?php echo $pageDescription?>" />
   <meta name="keywords"  content="<?php echo $pageKeywords?>" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <?php /* FILL INN META HERE AND UNCOMMENT 
 
-  <meta property="og:url" content="https://www.vivaldi.com" />
+  <meta property="og:url" content="https://www.site.com" />
   <meta property="og:title" content="<?php echo $pageTitle;?>" />
-  <meta property="og:image" content="/images/viv-fb-og.jpg" />
+  <meta property="og:image" content="/images/logo.jpg" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Vivaldi" />
+  <meta property="og:site_name" content="Site" />
   */
 
   ?>
@@ -76,7 +74,7 @@ if (isset($menuMarkup)) {
 
 ?>
 <body class="<?=$bodyClasses?>">
-
+<?php /*
   <header id="site-header">
     <div class="site-header-toprow">
       <a class="site-logo" href="/">
@@ -90,4 +88,4 @@ if (isset($menuMarkup)) {
          </div>';
 }?>
 
-  </header>
+  </header> */ ?>
