@@ -9,7 +9,7 @@ include "header.php";
   <div class="section-inner">
     <div class="container center">
     <h1>Want to join us on an adventure?</h1>
-      <a href="mailto:luxuryjeeptours@gmail.com?subject=Booking Inquiry" class="btn-download">Book Now</a>
+      <a href="mailto:luxuryjeeptours@gmail.com?subject=Booking Inquiry" class="btn-book">Book Now</a>
     </div>
   </div>
 <?php include "./footer.php";?>
