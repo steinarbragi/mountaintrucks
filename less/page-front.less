@@ -1,6 +1,6 @@
 body.trucks {
 		#trucks.section {
-			background: url("/assets/trucksbg2.jpg") no-repeat fixed;
+			background: url("/assets/trucksbg3.jpg") no-repeat fixed;
 		  	background-size: cover;
 		  	background-position: bottom;
 		  	background-color: rgba(0,0,0,.5);
@@ -28,6 +28,46 @@ body.trucks {
 			}
 		}
 
+		.btn-book {
+		  user-select: none;
+		  cursor: pointer;
+		  text-decoration: none;
+		  color: black;
+		  border: 4px solid white;
+		  border-radius: 2px;
+		  text-shadow: 0 1px 2px fade(black, 25%);
+		  background-color: white;
+		  text-transform: uppercase;
+		  font-size: 1em;
+		  line-height: 1.2;
+		  padding: 0.75em 2em;
+		  text-align: center;
+		  display: inline-block;
+		  margin: @padding auto;
+		  transition: transform 50ms, box-shadow 50ms;
+		  &:active {
+		    transition: none;
+		    transform: translateY(2px);
+		    transform-origin: 0 100%;
+		    box-shadow: 0 0 0 0 darken(@green, 8);
+		    background-color: darken(@green, 4);
+		  }
+		}
+		.btn-book {
+		  .btn-book-cta {
+		    display: block;
+		    font-size: 1.3em;
+		    font-weight: 600;
+		    color: white;
+		  }
+		  .btn-book-version {
+		    text-shadow: none;
+		    font-size: 0.85em;
+		    font-weight: 500;
+		    color: fade(black, 50%);
+		  }
+		}
+
 		#trucks.section::after {
 			content: ' ';
 		    position: absolute;
@@ -38,12 +78,12 @@ body.trucks {
 		    background-color: rgba(255,255,255,0);
 		    transition: background-color 1s;
 		    @media (max-width: @mobile-max) { 
-				background-color: rgba(0,0,0,.6);
+				background-color: rgba(0,0,0,.4);
 			}
 		}
 
 		#trucks.section:hover:after {
-		    background-color: rgba(0,0,0,.6);
+		    background-color: rgba(0,0,0,.4);
 		}
 
 
@@ -62,8 +102,8 @@ body.trucks {
 			}
 		}
 	h1 {
-		color: #FF6200;
-		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+		color: #002B52;
+		//text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	}
 	#site-footer {
 		.container {
